@@ -42,13 +42,14 @@ print(sum_1_2)
 ## 4. Selenium执行JS
 
 ```
+# 调用结果selenium需要return ret
 ret = browser.execute_script(js)
 ```
 
 ## 5. Pyppeteer执行JS
 
 ```
-# 调用结果selenium需要return, puppeteer不需要
+# puppeteer需要最后是返回调用结果的函数 method()
 ret = await page.evaluate(js, *data)
 
 # 页面加载前调用,一般用于初始化环境
